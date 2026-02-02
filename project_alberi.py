@@ -768,7 +768,7 @@ def main() -> None:
     print("=== Data Analysis Project: Monumental Trees of Sicily ===")
 
     # Default dataset path for the environment used here.
-    dataset_path = "data/alberimonumentalisicilia.csv"
+    dataset_path = "alberimonumentalisicilia.csv"
 
     try:
         trees = load_trees_from_csv_path(dataset_path)
