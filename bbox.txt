@@ -1,0 +1,32 @@
+# bbox.txt
+# Format per line: TL_lon; TL_lat; BR_lon; BR_lat
+# TL = top-left corner, BR = bottom-right corner
+
+# --- VALID boxes (Sicily area examples) ---
+12.30; 38.25; 13.60; 37.40
+14.10; 38.40; 15.35; 37.65
+13.00; 37.90; 14.20; 37.20
+14.40; 37.95; 15.10; 37.40
+
+# --- INVALID (should be ignored) ---
+
+# Wrong order: TL_lat not greater than BR_lat (top-left must be above bottom-right)
+13.00; 37.10; 14.00; 37.60
+
+# Wrong order: TL_lon not less than BR_lon
+15.00; 38.20; 14.50; 37.80
+
+# Out of range latitude
+13.00; 95.00; 14.00; 37.00
+
+# Out of range longitude
+190.00; 38.00; 14.00; 37.00
+
+# Not enough values
+13.00; 38.00; 14.00
+
+# Extra values
+13.00; 38.00; 14.00; 37.00; 999
+
+# Empty / comment line below is ignored
+#
